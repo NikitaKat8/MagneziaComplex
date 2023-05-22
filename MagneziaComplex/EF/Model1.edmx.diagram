@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1926a4148902467884e646294e512b4a" Name="Diagram1">
+        <EntityTypeShape EntityType="MagneziaModel.Client" Width="1.5" PointX="6" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.ClientFavouriteTrainers" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.ClientTraining" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Club" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Employee" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Gender" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Role" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Subscription" Width="1.5" PointX="3.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.SubscriptionClient" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.TimetableTraining" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagneziaModel.Training" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MagneziaModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_ClientFavoriteTrainers_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_ClientFavouriteTrainings_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_SubscriptionClient_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_ClientFavoriteTrainers_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_ClientFavouriteTrainings_GroupTrainings" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_Employee_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_SubscriptionClient_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_SubscriptionClient_Club1" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_TimetableTraining_Club" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_Employee_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_Employee_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_TimetableTraining_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_SubscriptionClient_Subscription" ManuallyRouted="false" />
+        <AssociationConnector Association="MagneziaModel.FK_TimetableTraining_GroupTrainings" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

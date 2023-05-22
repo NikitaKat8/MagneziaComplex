@@ -1,0 +1,242 @@
+﻿<Window x:Class="MagneziaComplex.AddClientSubscriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagneziaComplex"
+        mc:Ignorable="d"
+        Title="AddClientSubscriptionWindow" Height="550" Width="500"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize">
+    <Border 
+        x:Name="AppWindow"
+        MouseDown="AppWindow_MouseDown" BorderBrush="White" BorderThickness="1"
+        Background="{DynamicResource PrimaryBackgroundColor}"
+            CornerRadius="8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+
+            <Viewbox Stretch="Uniform"                 
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Margin="55 0 55 0"
+                 Grid.Row="4"
+                >
+                <Button
+                    x:Name="btnCancel"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    BorderBrush="Transparent"
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"          
+                    Background="#2d2d2d"
+                    Foreground="White"
+                    Content="Отмена"   
+                    Click="btnCancel_Click"
+                    MouseEnter="btnCancel_MouseEnter"
+                    MouseLeave="btnCancel_MouseLeave"
+               />
+
+            </Viewbox>
+
+            <Viewbox Stretch="Uniform"                 
+                 Grid.Column="2"
+                 Grid.ColumnSpan="2"
+                 Margin="50 0 50 0"
+                 Grid.Row="4"
+                >
+                <Button
+                    x:Name="btnSelect"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    BorderBrush="Transparent"
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"          
+                    Background="#2d2d2d"
+                    Foreground="White"
+                    Content="Выбрать"   
+                    Click="btnSelect_Click"
+                    MouseEnter="btnSelect_MouseEnter"
+                    MouseLeave="btnSelect_MouseLeave"
+               />
+
+            </Viewbox>
+
+
+            <ListView
+                x:Name="lvSubs"
+                Grid.Row="0"
+                Grid.RowSpan="4"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                ScrollViewer.CanContentScroll="False"
+                Margin="0 5 0 0"
+                MouseDoubleClick="lvSubs_MouseDoubleClick"
+                Grid.ColumnSpan="4" d:ItemsSource="{d:SampleData ItemCount=5}"               
+                >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border 
+        x:Name="AppWindow"
+        Height="300" Width="450"
+        Background="{DynamicResource PrimaryBackgroundColor}"
+            CornerRadius="8" BorderThickness="1">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF3A5FFF"/>
+                                    <GradientStop Color="#FFAA2CFC" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <Image 
+                Source="/Resources/sub_img.png"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Width="100"              
+                />
+
+                                <TextBlock
+                x:Name="tbName"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="35"
+                TextWrapping="Wrap"
+                Text="{Binding Name}"
+                >
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF3A5FFF"/>
+                                            <GradientStop Color="#FFAA2CFC" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+
+                                <TextBlock
+                x:Name="tbPrice"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="35"
+                Text="{Binding Price}"
+                Foreground="White"
+                />
+
+                                <TextBlock
+                x:Name="tbDescription"
+                Grid.Column="2"
+                TextWrapping="Wrap"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Margin="0 0 10 0"
+                Text="{Binding Description}"
+                Foreground="White"
+                />
+
+
+                                <StackPanel
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Left"
+                Orientation="Horizontal" Margin="10 0 0 0">
+
+
+                                    <TextBlock
+                x:Name="tbMonthQty"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Text="{Binding CountMonth, StringFormat=Кол-во месяцев: \{0\}}"
+                Foreground="White"
+                Margin="0 0 10 0"
+                />
+
+                                    <TextBlock
+                x:Name="tbDiscount"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Text="{Binding Discount, StringFormat= Скидка: \{0\}}"
+                Foreground="White"
+                Margin="0 0 10 0"
+                />
+
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+
+        </Grid>
+
+    </Border>
+</Window>

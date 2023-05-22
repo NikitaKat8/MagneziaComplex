@@ -1,0 +1,411 @@
+﻿<Page x:Class="MagneziaComplex.Pages.AddClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MagneziaComplex.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="AddClientPage">
+
+    <Grid Background="{DynamicResource PrimaryBackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Stretch="Uniform"                 
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Margin="40 0 40 0"
+                 Grid.Row="4"
+                >
+            <Button
+            x:Name="btnReg"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            BorderBrush="Transparent"
+            FontFamily="Georgia"
+            FontSize="14"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"          
+            Background="#2d2d2d"
+            Foreground="White"
+            Content="Выбрать абонемент"   
+            Click="btnReg_Click"
+            MouseEnter="btnReg_MouseEnter"
+            MouseLeave="btnReg_MouseLeave"
+               />
+
+        </Viewbox>
+
+        <Viewbox Stretch="Uniform"                 
+                 Grid.Column="2"
+                 Grid.ColumnSpan="2"
+                 Margin="40 0 40 0"
+                 Grid.Row="4"
+                >
+            <Button
+            x:Name="btnEdit"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            BorderBrush="Transparent"
+            FontFamily="Georgia"
+            FontSize="14"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"          
+            Background="#2d2d2d"
+            Foreground="White"
+            Content="Сохранить изменения"   
+            MouseEnter="btnEdit_MouseEnter"
+            MouseLeave="btnEdit_MouseLeave"
+            Click="btnEdit_Click"
+               />
+
+        </Viewbox>
+
+
+
+
+
+        <Viewbox 
+            Stretch="Uniform"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+            >
+        
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.ColumnSpan="6">
+
+            <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Ф:</TextBlock>
+            </Viewbox>
+
+            <Viewbox Height="30" Width="200" Stretch="Uniform">
+                <TextBox
+                    x:Name="tbLastName"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbLastName_PreviewTextInput"
+                    Width="200"
+                    Foreground="White"
+                />
+            </Viewbox>
+
+            <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">И:</TextBlock>
+            </Viewbox>
+
+            <Viewbox Height="30" Width="200" Stretch="Uniform">
+                <TextBox
+                    x:Name="tbFirstName"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbFirstName_PreviewTextInput"
+                    Width="200"
+                    Foreground="White"
+                />
+            </Viewbox>
+
+            <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">О:</TextBlock>
+            </Viewbox>
+
+            <Viewbox Height="30" Width="200" Stretch="Uniform">
+                <TextBox
+                    x:Name="tbPatronymic"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbPatronymic_PreviewTextInput"
+                    Width="200"
+                    Foreground="White"
+                />
+            </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Д/Р:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="100" Stretch="Uniform" Margin="0 0 10 0">
+                    <DatePicker
+                    x:Name="dpBirthDay"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    Text="qeqwe"
+                    Width="100"
+                  
+                    Foreground="White"
+                />
+                </Viewbox>
+
+
+            </StackPanel>
+
+        </Viewbox>
+
+
+        <Viewbox 
+            Stretch="Uniform"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+            >
+
+            <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.ColumnSpan="6">
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">📞</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="200" Stretch="Uniform">
+                    <TextBox
+                    x:Name="tbPhone"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    MaxLength="11"
+                    PreviewTextInput="tbPhone_PreviewTextInput"
+                    Width="200"
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">✉:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="200" Stretch="Uniform">
+                    <TextBox
+                    x:Name="tbEmail"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbEmail_PreviewTextInput"
+                    Width="200"
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Серия паспорта:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="50" Stretch="Uniform">
+                    <TextBox
+                    x:Name="tbPassSerial"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbPassSerial_PreviewTextInput"
+                    Width="50"
+                    MaxLength="4"
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Номер паспорта:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="60" Stretch="Uniform" Margin="0 0 10 0">
+                    <TextBox
+                    x:Name="tbPassNum"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbPassNum_PreviewTextInput"
+                    Width="60"
+                    MaxLength="6"
+                    Foreground="White"
+                />
+                </Viewbox>
+
+
+            </StackPanel>
+
+        </Viewbox>
+
+
+
+
+        <Viewbox 
+            Stretch="Uniform"
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+           
+            >
+
+            <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="0"
+            Margin="100 0 100 0"    
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.ColumnSpan="6">
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Рост</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="30" Stretch="Uniform">
+                    <TextBox
+                    x:Name="tbGrowth"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbGrowth_PreviewTextInput"
+                    MaxLength="3"
+                    Width="30"
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Вес:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="30" Stretch="Uniform">
+                    <TextBox
+                    x:Name="tbWeight"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    PreviewTextInput="tbWeight_PreviewTextInput"
+                    Width="30"
+                    MaxLength="3"    
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Пол:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="100" Stretch="Uniform">
+                    <ComboBox
+                    x:Name="cmbGender"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    Text="1614"
+                    Width="100"
+                   
+                    Foreground="White"
+                />
+                </Viewbox>
+
+                <Viewbox Height="20" Margin="10 0 10 0" Stretch="Uniform">
+                    <TextBlock x:Name="txtClub" FontSize="10" FontFamily="Georgia" Foreground="#B0B7C3">Клуб:</TextBlock>
+                </Viewbox>
+
+                <Viewbox Height="30" Width="200" Stretch="Uniform">
+                    <ComboBox
+                    x:Name="cmbClub"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"               
+                    FontFamily="Georgia"
+                    FontSize="14"
+                    Text="1614"
+                    Width="200"
+                   
+                    Foreground="White"
+                />
+                </Viewbox>
+
+
+
+
+            </StackPanel>
+
+        </Viewbox>
+
+
+
+
+        <Image Source="/Resources/reg_img.png"
+           Grid.Column="5"
+           Grid.Row="4"
+           />
+
+
+
+    </Grid>
+</Page>

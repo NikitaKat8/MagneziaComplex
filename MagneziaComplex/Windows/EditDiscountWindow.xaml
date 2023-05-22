@@ -1,0 +1,130 @@
+﻿<Window x:Class="MagneziaComplex.EditDiscountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagneziaComplex"
+        mc:Ignorable="d"
+        Title="EditDiscountWindow" Height="150" Width="270"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize">
+    <Border 
+        MouseDown="Border_MouseDown"
+        Background="{DynamicResource PrimaryBackgroundColor}"
+        CornerRadius="8" BorderBrush="White" BorderThickness="1">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+
+                <RowDefinition Height="1*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+
+            <Image 
+                Source="/Resources/logo.png" 
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                />
+
+
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                >
+                <TextBlock
+                Grid.Row="1"
+                x:Name="tbName"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextWrapping="Wrap"
+                FontFamily="Georgia"
+                FontSize="15"
+                Text="12 месяцев"
+                Foreground="White"
+                Margin="10 0 10 0"
+                />
+
+                <TextBox
+                Grid.Row="1"
+                x:Name="tbDiscount"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextWrapping="Wrap"
+                FontFamily="Georgia"
+                FontSize="15"
+                Text="0.00"
+                MaxLength="4"
+                Width="40"
+                Foreground="White"
+                Margin="10 0 10 0"
+                PreviewTextInput='tbDiscount_PreviewTextInput'
+                />
+            </StackPanel>
+            
+           
+
+            <Button
+                x:Name="btnOk"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                BorderBrush="Transparent"
+                FontFamily="Georgia"
+                FontSize="11"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"          
+                Background="#2d2d2d"
+                Foreground="White"
+                Content="Ок" 
+                Width="80"
+                Height="20"
+                Click="btnOk_Click"
+                MouseEnter="btnOk_MouseEnter"
+                MouseLeave="btnOk_MouseLeave"
+            />
+
+            <Button
+                x:Name="btnCancel"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                BorderBrush="Transparent"
+                FontFamily="Georgia"
+                FontSize="11"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"          
+                Background="#2d2d2d"
+                Foreground="White"
+                Content="Отмена" 
+                Width="80"
+                Height="20"
+                Click="btnCancel_Click"
+                MouseEnter="btnCancel_MouseEnter"
+                MouseLeave="btnCancel_MouseLeave"
+            />
+
+
+        </Grid>
+
+    </Border>
+</Window>

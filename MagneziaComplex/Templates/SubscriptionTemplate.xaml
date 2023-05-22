@@ -1,0 +1,140 @@
+﻿<Window x:Class="MagneziaComplex.Templates.SubscriptionTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagneziaComplex.Templates"
+        mc:Ignorable="d"
+        Title="SubscriptionTemplate"   Height="300" Width="450"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize">
+    <Border 
+        x:Name="AppWindow"
+       
+        Background="{DynamicResource PrimaryBackgroundColor}"
+            CornerRadius="8" BorderThickness="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF3A5FFF"/>
+                <GradientStop Color="#FFAA2CFC" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Image 
+                Source="/Resources/sub_img.png"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Width="100"              
+                />
+
+            <TextBlock
+                x:Name="tbName"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="35"
+                Text="12 месяцев"
+                >
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3A5FFF"/>
+                        <GradientStop Color="#FFAA2CFC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+
+            <TextBlock
+                x:Name="tbPrice"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="35"
+                Text="25000"
+                Foreground="White"
+                />
+
+            <TextBlock
+                x:Name="tbDescription"
+                Grid.Column="2"
+                TextWrapping="Wrap"
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Margin="0 0 10 0"
+                Text="Годовой абонемент в фитнес центре Магнезия. Посещение клуба с 6:00 до 17:00 по будням, с 16:00 до 23:00 в выходные дни."
+                Foreground="White"
+                />
+
+
+            <StackPanel
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Left"
+                Orientation="Horizontal" Margin="10 0 0 0">
+                     
+            
+            <TextBlock
+                x:Name="tbMonthQty"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Text="Кол-во месяцев: 12"
+                Foreground="White"
+                Margin="0 0 10 0"
+                />
+
+                <TextBlock
+                x:Name="tbDiscount"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                FontFamily="Georgia"
+                FontSize="13"
+                Text="Размер скидки, %: 15"
+                Foreground="White"
+                Margin="0 0 10 0"
+                />
+
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>
